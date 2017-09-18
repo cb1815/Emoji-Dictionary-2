@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Emoji Dictionary
 //
-//  Created by Charles Braham on 14/09/2017.
+//  Created by Charles Braham on 18/09/2017.
 //  Copyright © 2017 cb1815. All rights reserved.
 //
 
