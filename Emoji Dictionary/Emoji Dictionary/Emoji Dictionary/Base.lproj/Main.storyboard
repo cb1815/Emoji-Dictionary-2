@@ -23,14 +23,26 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XGt-W7-qEn">
+                                <rect key="frame" x="168" y="367" width="39" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="IgC-tb-cQT" firstAttribute="top" secondItem="bBZ-GO-Tfa" secondAttribute="top" constant="50" id="6l5-Gt-Pf9"/>
+                            <constraint firstItem="XGt-W7-qEn" firstAttribute="top" secondItem="IgC-tb-cQT" secondAttribute="bottom" constant="60.5" id="88K-nu-hNy"/>
                             <constraint firstItem="IgC-tb-cQT" firstAttribute="centerX" secondItem="ZCX-pe-UOR" secondAttribute="centerX" id="CM6-vb-5ZI"/>
+                            <constraint firstItem="XGt-W7-qEn" firstAttribute="centerX" secondItem="ZCX-pe-UOR" secondAttribute="centerX" id="mYW-j7-1c6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bBZ-GO-Tfa"/>
                     </view>
+                    <connections>
+                        <outlet property="EmojiLabel" destination="IgC-tb-cQT" id="RHv-bS-PKU"/>
+                        <outlet property="EmojiText" destination="XGt-W7-qEn" id="fxC-wD-ass"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m3m-bH-mf3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
