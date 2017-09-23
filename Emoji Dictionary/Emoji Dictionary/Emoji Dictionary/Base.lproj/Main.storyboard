@@ -23,8 +23,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XGt-W7-qEn">
-                                <rect key="frame" x="168" y="367" width="39" height="21.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Desciption" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XGt-W7-qEn">
+                                <rect key="frame" x="144" y="367" width="87" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smiley" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4b6-Xw-ptp">
+                                <rect key="frame" x="160.5" y="438" width="54" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birth Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wOi-3I-xyx">
+                                <rect key="frame" x="147.5" y="505" width="80" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -35,13 +47,19 @@
                             <constraint firstItem="IgC-tb-cQT" firstAttribute="top" secondItem="bBZ-GO-Tfa" secondAttribute="top" constant="50" id="6l5-Gt-Pf9"/>
                             <constraint firstItem="XGt-W7-qEn" firstAttribute="top" secondItem="IgC-tb-cQT" secondAttribute="bottom" constant="60.5" id="88K-nu-hNy"/>
                             <constraint firstItem="IgC-tb-cQT" firstAttribute="centerX" secondItem="ZCX-pe-UOR" secondAttribute="centerX" id="CM6-vb-5ZI"/>
+                            <constraint firstItem="4b6-Xw-ptp" firstAttribute="centerX" secondItem="ZCX-pe-UOR" secondAttribute="centerX" id="Sfl-tE-I21"/>
+                            <constraint firstItem="4b6-Xw-ptp" firstAttribute="top" secondItem="XGt-W7-qEn" secondAttribute="bottom" constant="49.5" id="YGV-ej-LLe"/>
+                            <constraint firstItem="wOi-3I-xyx" firstAttribute="top" secondItem="4b6-Xw-ptp" secondAttribute="bottom" constant="45.5" id="jAT-hQ-rJd"/>
                             <constraint firstItem="XGt-W7-qEn" firstAttribute="centerX" secondItem="ZCX-pe-UOR" secondAttribute="centerX" id="mYW-j7-1c6"/>
+                            <constraint firstItem="wOi-3I-xyx" firstAttribute="centerX" secondItem="ZCX-pe-UOR" secondAttribute="centerX" id="qQf-bP-t7t"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bBZ-GO-Tfa"/>
                     </view>
                     <connections>
+                        <outlet property="BirthLabel" destination="wOi-3I-xyx" id="tIZ-KW-f2I"/>
                         <outlet property="EmojiLabel" destination="IgC-tb-cQT" id="RHv-bS-PKU"/>
                         <outlet property="EmojiText" destination="XGt-W7-qEn" id="fxC-wD-ass"/>
+                        <outlet property="SmileyLabel" destination="4b6-Xw-ptp" id="CVa-yj-hT5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m3m-bH-mf3" userLabel="First Responder" sceneMemberID="firstResponder"/>

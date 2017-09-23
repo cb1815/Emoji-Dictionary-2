@@ -13,11 +13,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBOutlet weak var TableView: UITableView!
     
-    var emojis = ["😅","🤡","💪"]
+    var emojis: [Emoji] = []
     
     override func viewDidLoad() { // anything in here runs any time the app first opens up
         TableView.dataSource = self
         TableView.delegate = self
+        emojis = makeEmojiArray()
         
         
         super.viewDidLoad()
@@ -31,7 +32,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell { //what do you want in each row
     print(indexPath.row)
     let cell = UITableViewCell()
-    cell.textLabel?.text = emojis[indexPath.row] //this puts in each consecutive item
+    let emoji = emojis[indexPath.row]
+    cell.textLabel?.text = emoji.stringEmoji //this puts in each consecutive item
     return cell
     }
     
@@ -53,6 +55,32 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // Dispose of any resources that can be recreated.
     }
 
-
 }
+
+func makeEmojiArray() -> [Emoji] {
+    let emoji1 = Emoji()
+    emoji1.stringEmoji = "🥗"
+    emoji1.birthYear = 2012
+    emoji1.category = "Vegetable"
+    emoji1.definition = "Salad"
+    
+    let emoji2 = Emoji()
+    emoji2.stringEmoji = "🍎"
+    emoji2.birthYear = 2010
+    emoji2.category = "Fruit"
+    emoji2.definition = "Apple"
+    
+    let emoji3 = Emoji()
+    emoji3.stringEmoji = "👀"
+    emoji3.birthYear = 2009
+    emoji3.category = "Human Body"
+    emoji3.definition = "Eyes"
+    
+    
+    return [emoji1, emoji2, emoji3]
+}
+
+
+
+
 

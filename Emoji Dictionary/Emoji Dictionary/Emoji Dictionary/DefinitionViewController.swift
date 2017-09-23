@@ -12,6 +12,8 @@ class DefinitionViewController: UIViewController {
 
     @IBOutlet weak var EmojiLabel: UILabel!
     @IBOutlet weak var EmojiText: UILabel!
+    @IBOutlet weak var SmileyLabel: UILabel!
+    @IBOutlet weak var BirthLabel: UILabel!
     
     var emoji = "No EMOJI"
     override func viewDidLoad() {
@@ -21,7 +23,9 @@ class DefinitionViewController: UIViewController {
         EmojiLabel.text = emoji
         
         if emoji == "🤡" {
-            EmojiText.text = "A Cute Hamster"
+            EmojiText.text = "A Clown"
+            SmileyLabel.text = "Smiley: Clown"
+            BirthLabel.text = "Birth Year = 2009"
         }
         
     }
