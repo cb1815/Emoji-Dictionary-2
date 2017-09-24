@@ -8,25 +8,24 @@
 
 import UIKit
 
-class DefinitionViewController: UIViewController {
+class DefinitionViewController: UIViewController { // using a class
 
-    @IBOutlet weak var EmojiLabel: UILabel!
+    @IBOutlet weak var EmojiLabel: UILabel! 
     @IBOutlet weak var EmojiText: UILabel!
     @IBOutlet weak var SmileyLabel: UILabel!
     @IBOutlet weak var BirthLabel: UILabel!
     
-    var emoji = "No EMOJI"
+    var emoji = Emoji()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        EmojiLabel.text = emoji
+        EmojiLabel.text = emoji.stringEmoji
+        BirthLabel.text = "BirthYear: \(emoji.birthYear)"
+        SmileyLabel.text = "Category: \(emoji.category)"
+        EmojiText.text = emoji.definition
         
-        if emoji == "🤡" {
-            EmojiText.text = "A Clown"
-            SmileyLabel.text = "Smiley: Clown"
-            BirthLabel.text = "Birth Year = 2009"
-        }
         
     }
 
